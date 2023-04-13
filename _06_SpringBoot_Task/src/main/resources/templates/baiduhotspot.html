@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>邮件</title>
+    <style type="text/css">
+        table {
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            border-width: 1px;
+            border-color: #a9c6c9;
+            border-collapse: collapse;
+        }
+        table th {
+            background-color:#ffcc33;
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #a9c6c9;
+        }
+        table tr {
+            border-color: #a9c6c9;
+        }
+        table td {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #a9c6c9;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>实时热点</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="hot:${lisHotSpot}">
+            <td><a th:href="${hot.getUrl()}" target="_blank" th:title="${hot.getWord()}" th:text="${hot.getWord()}"></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

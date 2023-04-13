@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mark.mybatis.User.UserMapper">
+
+    <select id="selectUserAll" resultType="com.mark.Models.User1">
+        select t.* from 用户表 t order by to_number(t.id)
+    </select>
+
+    <select id="GetUserByID" resultType="com.mark.Models.User1">
+        select * from 用户表 t where t.id = #{id}
+    </select>
+</mapper>

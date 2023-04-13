@@ -1,0 +1,14 @@
+server:
+  port: 8082
+
+# springboot 整合 mybatis 相关配置
+spring:
+  datasource:
+    driver: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: Mark
+    password: 123456
+
+mybatis:
+  mapper-locations:  classpath:mapper/*Mapper.xml,classpath:mapper/*/*Mapper.xml # mapper映射文件路径
+  type-aliases-package: com.mark.Models # 配置那个包下的类有默认的别名

@@ -1,0 +1,93 @@
+# 普通值(字面量)
+name: mark
+age: 25
+date: 2022/12/28
+flag: true
+
+# 对象(属性和值)、Map(键值对)
+student:
+  name: mark
+  age: 30
+  sex: 男
+
+# Map(键值对)
+map:
+  k1: v1
+  k2: v2
+  k3: v3
+
+# student2 等同于 student
+student2: {name: zs,age: 20,sex: 女}
+
+# map2 等同于 map
+map2: {k1: v1,k2: v2,k3: v3}
+
+# 数组、list、set
+pets:
+  - dog
+  - cat
+  - pig
+
+# pets2 等同于 pets
+pets2: [dog,cat,pig]
+
+
+#对象数组、对象list、对象set
+students:
+  - name: mark
+    age: 25
+    sex: 男
+  - name: zs
+    age: 20
+    sex: 男
+  - {name: lisi,age: 18,sex: 女}
+
+# 指定默认server端口号
+server:
+  port: ${myPort:8080}
+
+myPort: 8081
+
+
+#练习
+school:
+  name: 马文磊
+  age: 25
+  sex: 男
+  teacher: true
+  birthday: 1997/10/26
+  maps:
+    name: 张三
+    age: 28
+  maps2: {name: 李四,age: 30,sex: 女}
+  lisDog:
+    - name: 琪琪
+      age: 2
+    - {name: 旺财,age: 3}
+  dog:
+    name: 阿黄
+    age: 1
+  arr:
+    - 猪
+    - 狗
+    - 牛
+    - 羊
+  arr2: [柴,米,油,盐]
+  dogMap:
+    key:
+      name: 花花
+      age: 2
+    key2: {name: 小黑,age: 3}
+
+# springboot 整合 mybatis 相关配置
+spring:
+  datasource:
+    driver: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: Mark
+    password: 123456
+
+
+mybatis:
+  mapper-locations:  classpath:mapper/*Mapper.xml,classpath:mapper/*/*Mapper.xml # mapper映射文件路径
+  type-aliases-package: com.mark.Models # 配置那个包下的类有默认的别名

@@ -1,0 +1,12 @@
+# nacos 配置
+nacos:
+  config:
+    namespace: test
+    server-addr: http://127.0.0.1:8848/nacos
+    username: test
+    password: test
+
+#debug: true #开启日志
+#logging:
+#  level:
+#    com.mark: debug #设置日志级别
